@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "82349193208",
+    "firebase_url": "https://foody-ad26d.firebaseio.com",
+    "project_id": "foody-ad26d",
+    "storage_bucket": "foody-ad26d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82349193208:android:a450c474f2bd859c2c480d",
+        "android_client_info": {
+          "package_name": "com.example.foody"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82349193208-6vj61k9ermq46n2a4kqquj16rbd58428.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foody",
+            "certificate_hash": "6a5b2e0b58a433dc62542c4d793f8482a43d35f4"
+          }
+        },
+        {
+          "client_id": "82349193208-09dqqosmgjigrvi4bqcvpc73d0e6l6u4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT-D84JXMWezbT4w4Vzxvn-LjB1gm01WE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82349193208-09dqqosmgjigrvi4bqcvpc73d0e6l6u4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

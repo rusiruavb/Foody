@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:hapticFeedbackEnabled="false"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        android:background="@drawable/admin_login_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Update Product"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/textColor"
+                android:layout_marginBottom="20dp"
+                android:textSize="36dp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/update_product_name"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:hint="Product Name"
+                android:drawablePadding="12dp"
+                android:background="@drawable/text_input_background"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="15dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/update_product_price"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:hint="Product Price"
+                android:drawablePadding="12dp"
+                android:background="@drawable/text_input_background"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="15dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/update_product_quantity"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:hint="Product Quantity"
+                android:inputType="number"
+                android:drawablePadding="12dp"
+                android:background="@drawable/text_input_background"
+                android:maxLines="1"
+                android:padding="15dp" />
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/update_product_description"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:hint="Description"
+                android:drawablePadding="12dp"
+                android:padding="15dp"
+                android:background="@drawable/text_input_background"
+                />
+
+
+            <Button
+                android:id="@+id/update_product_button"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:width="45dp"
+                android:background="@drawable/button_background"
+                android:padding="15dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="Update product"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/delete_product_button"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:width="45dp"
+                android:background="@drawable/delete_button_background"
+                android:padding="15dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="delete product"
+                android:textSize="18dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:gravity="center"
+                android:id="@+id/update_product_cancel"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
