@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".UserRegister">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="@drawable/login_top_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Update Payment Method"
+                android:textColor="@color/textColorWhite"
+                android:layout_marginBottom="20dp"
+                android:textSize="32dp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_payment_name"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/text_input_background"
+                android:fontFamily="@font/open_sans_bold"
+                android:hint="Name on the Card"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textAlignment="center" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_payment_card_number"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/text_input_background"
+                android:fontFamily="@font/open_sans_bold"
+                android:hint="Card Number"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textAlignment="center" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_payment_cvv"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/text_input_background"
+                android:fontFamily="@font/open_sans_bold"
+                android:hint="CVV"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textAlignment="center" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_payment_validation_period"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/text_input_background"
+                android:fontFamily="@font/open_sans_bold"
+                android:hint="Validation Period"
+                android:inputType="date"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/add_payment_button"
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:width="45dp"
+                android:background="@drawable/button_background"
+                android:padding="15dp"
+                android:text="Update"
+                android:textColor="@color/textColorWhite"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/register_to_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CANCEL" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
