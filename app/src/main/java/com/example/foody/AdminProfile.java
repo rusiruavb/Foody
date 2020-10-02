@@ -46,6 +46,8 @@ public class AdminProfile extends Fragment {
                 sellerEmail.setText(snapshot.child("email").getValue().toString());
             }
 
+            // need to add recycle view logic to admin profile interface
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) { }
         });

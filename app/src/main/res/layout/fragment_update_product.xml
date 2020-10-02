@@ -25,7 +25,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="90dp"
+            android:layout_marginTop="50dp"
             android:orientation="vertical"
             android:gravity="center">
 
@@ -79,12 +79,12 @@
             <MultiAutoCompleteTextView
                 android:id="@+id/update_product_description"
                 android:layout_width="380dp"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="Description"
                 android:drawablePadding="12dp"
                 android:padding="15dp"
-                android:background="@drawable/text_input_background"
+                android:background="@drawable/custom_input"
                 />
 
 

@@ -8,4 +8,7 @@
     <color name="textColorWhite">#FFFFFF</color>
     <color name="textColorBlack">#000000</color>
     <color name="textColor">#000000</color>
+    <color name="deleteButton">#F63C2E</color>
+    <color name="inputDisabled">#C5C2C2</color>
+    <color name="inputColor">#F35D38</color>
 </resources>

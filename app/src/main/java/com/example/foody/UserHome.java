@@ -33,14 +33,17 @@ public class UserHome extends AppCompatActivity {
         toolbar.setTitle("FOODy");
         setSupportActionBar(toolbar);
 
-        setFragment(new HomePage());
+        setFragment(new UserHomePage());
 
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
+                    case R.id.nav_user_add_payment:
+                        setFragment(new AddPaymentMethod());
+                        return true;
                     case R.id.nav_user_home:
-                        setFragment(new HomePage());
+                        setFragment(new UserHomePage());
                         return true;
                     case R.id.nav_user_purchase_history:
                         setFragment(new PurchaseItems());
