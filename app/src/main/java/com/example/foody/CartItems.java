@@ -26,6 +26,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
 
 public class CartItems extends Fragment {
@@ -47,6 +50,7 @@ public class CartItems extends Fragment {
     private int databaseItemQuantityForRemove;
     private int totalSum;
     private int value;
+    private BuyNow buyNow;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -56,6 +60,7 @@ public class CartItems extends Fragment {
         totalCartPrice = view.findViewById(R.id.cart_item_price);
         cartItemRecyclerView = view.findViewById(R.id.cart_recycle_view);
         buyNowButton = view.findViewById(R.id.buy_now_button);
+        buyNow = new BuyNow();
 
         cartItemRecyclerView.setHasFixedSize(true);
         cartItemRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -120,6 +125,23 @@ public class CartItems extends Fragment {
                 return new CartItemViewHolder(v);
             }
         };
+
+        buyNowButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+                Date date = new Date();
+                String dateTime = dateFormat.format(date);
+                Bundle bundle = new Bundle();
+                bundle.putString("totalPrice", String.valueOf(sum));
+                bundle.putString("date", dateTime);
+                buyNow.setArguments(bundle);
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.user_main_frame, buyNow);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
 
         adapter.startListening();
         cartItemRecyclerView.setAdapter(adapter);
