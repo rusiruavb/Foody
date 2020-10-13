@@ -26,13 +26,13 @@ public class BuyNowTest {
     }
 
     @Test
-    public void testAddProductFragmentLaunch() {
+    public void testBuyNowtFragmentLaunch() {
         RelativeLayout relativeContainer = buyNowActivity.findViewById(R.id.test_container);
         assertNotNull(relativeContainer);
-        BuyNow fragmentAddProduct = new BuyNow();
-        buyNowActivity.getSupportFragmentManager().beginTransaction().add(relativeContainer.getId(), fragmentAddProduct).commitAllowingStateLoss();
+        BuyNow fragmentBuyNow = new BuyNow();
+        buyNowActivity.getSupportFragmentManager().beginTransaction().add(relativeContainer.getId(), fragmentBuyNow).commitAllowingStateLoss();
         getInstrumentation().waitForIdleSync();
-        View view = fragmentAddProduct.getView().findViewById(R.id.fragment_buy_now);
+        View view = fragmentBuyNow.getView().findViewById(R.id.fragment_buy_now_id);
         assertNotNull(view);
     }
 
